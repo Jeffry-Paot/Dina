@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Esquitrix.svg">
+    <title>Preguntas</title>
+</head>
+<body>
+    <section class="logo">
+        <a href="index.html">
+          <div id="logo-pos">
+            <img src="Esquitrix.svg" style="border-bottom-right-radius: 30px;" alt="Logo Esquitrix">
+          </div>
+        </a>
+    </section>
+    <section class="Qr">
+        <a href="https://www.instagram.com/esquitrix/">
+          <div id="Qr-pos">
+            <img src="qr-code.png" style="width: 160px; height: 160px;" alt="Qr Instagram">
+          </div>
+        </a>
+    </section>
+    <div class="container">
+        <h1 id="question">Pregunta 1</h1>
+        <div class="options">
+            <button class="option" onclick="checkAnswer(this)">Opción A</button>
+            <button class="option" onclick="checkAnswer(this)">Opción B</button>
+            <button class="option" onclick="checkAnswer(this)">Opción C</button>
+            <p id="result"></p>
+            <p id="comment" class="comment"></p>
+        </div>
+        <div class="overlay" id="game-over-overlay">
+            <p id="game-over-message">¡Perdiste la oportunidad!</p>
+            <button id="reset-button" onclick="resetGame()">Reiniciar</button>
+        </div>
+        <p id="result"></p>
+        <div class="overlay" id="congratulations-overlay" style="display: none;">
+            <p id="congratulations-message">¡Felicidades! Has respondido a las cinco preguntas.</p>
+            <button id="roulette-button" onclick="redirectToRoulette()">Ir a la Ruleta</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
